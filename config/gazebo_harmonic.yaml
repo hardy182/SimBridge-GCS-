@@ -1,0 +1,22 @@
+# Gazebo Sim (Harmonic / Ionic) Profile
+server:
+  host: "127.0.0.1"
+  port: 8050
+
+active_simulator: "gazebo"
+
+gazebo:
+  partition: ""
+  world_name: "default"
+  model_name: "quadcopter"
+  dynamic_pose_topic: "/world/default/dynamic_pose/info"
+  static_pose_topic: "/world/default/pose/info"
+  camera_topic: "/camera/image"
+  sub_timeout_s: 2.0
+
+stream:
+  enabled: true
+  width: 640
+  height: 360
+  jpeg_quality: 85
+  target_fps: 30.0

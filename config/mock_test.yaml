@@ -1,0 +1,20 @@
+# Mock Test Profile (Deterministic offline simulation)
+server:
+  host: "127.0.0.1"
+  port: 8050
+
+active_simulator: "mock"
+
+mock:
+  pattern: "lissajous"
+  speed: 1.0
+  altitude: 3.5
+  battery_drain_rate: 0.05
+  camera_source: "synthetic"
+
+stream:
+  enabled: true
+  width: 640
+  height: 360
+  jpeg_quality: 80
+  target_fps: 30.0

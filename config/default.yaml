@@ -1,0 +1,42 @@
+# Default SimBridge GCS Configuration Profile
+server:
+  host: "127.0.0.1"
+  port: 8050
+  reload: false
+  log_level: "info"
+
+telemetry:
+  rate_hz: 20.0
+  history_size: 500
+  stale_timeout_s: 3.0
+
+stream:
+  enabled: true
+  width: 640
+  height: 360
+  jpeg_quality: 80
+  target_fps: 30.0
+
+active_simulator: "mock" # options: "none", "mock", "gazebo", "px4", "blender"
+
+gazebo:
+  partition: ""
+  world_name: "default"
+  model_name: "quadcopter"
+  dynamic_pose_topic: "/world/default/dynamic_pose/info"
+  static_pose_topic: "/world/default/pose/info"
+  camera_topic: "/camera/image"
+  sub_timeout_s: 2.0
+
+px4:
+  connection: "udp:127.0.0.1:14550"
+  baud: 57600
+  system_id: 1
+  component_id: 1
+  heartbeat_timeout_s: 3.0
+  camera_source: "synthetic" # options: "synthetic", "webcam", "none"
+
+blender:
+  executable_path: "/usr/bin/blender"
+  asset_dir: ""
+  export_format: "gltf"

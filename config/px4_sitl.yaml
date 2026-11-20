@@ -1,0 +1,21 @@
+# PX4 SITL MAVLink Profile
+server:
+  host: "127.0.0.1"
+  port: 8050
+
+active_simulator: "px4"
+
+px4:
+  connection: "udp:127.0.0.1:14550"
+  baud: 57600
+  system_id: 1
+  component_id: 1
+  heartbeat_timeout_s: 3.0
+  camera_source: "synthetic"
+
+stream:
+  enabled: true
+  width: 640
+  height: 360
+  jpeg_quality: 80
+  target_fps: 30.0
